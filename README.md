@@ -49,6 +49,18 @@ node split-music.js example/song.m4a example/song.txt | pbcopy
 # paste it and press enter!
 ```
 
+### Autocomplete shorthand 
+Autocomplete shorthand, for when you have a bunch of files you want to split.
+Assumes you have the song and txt next to each other, with exactly the same name, other than the extension (eg. `my-songs.m4a` and `songs.txt`)
+```shell
+# shorthand.sh
+node split-music.js "${1}m4a" "${1}txt"
+```
+```shell
+./shorthand.sh some/folder/nested/deeply/my-song.
+```
+This works nicely with autocomplete, because it stops on the `.` of the extension :-)
+
 ## troubleshooting
 
 ### pipe into zsh skips lines?
