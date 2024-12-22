@@ -1,7 +1,7 @@
 # ffmpeg-split-multiple
 use to split an audio file into multiple audio files
 
-Creates the commands for splitting a music file into multiple based on a text file:
+Generates the `ffmpeg` commands for splitting an audio file into multiple audio files.
 
 example input ([text file](./example/song.txt))
 ```
@@ -29,7 +29,7 @@ ffmpeg -ss 00:12 -i "example/song.m4a" -to 00:02:33 "example/song/02 - First son
 ffmpeg -ss 02:45 -i "example/song.m4a" -to 00:03:10 "example/song/03 - Second song title.m4a"
 ffmpeg -ss 05:55 -i "example/song.m4a"  "example/song/04 - Third song title.m4a"
 ```
-Note that the output's `-to` has the song's 'duration' (instead of 'end') as is required by ffmpeg.
+Note that the output's `-to` has the song's 'duration' (instead of 'end') as is required by `ffmpeg`.
 
 ## prerequisites
 ```shell
@@ -43,7 +43,7 @@ nvm install --lts
 mkdir foo
 cd foo
 
-node split-music.js example/song.m4a example/song.txt
+node split-music.js example/song.m4a example/song.txt | pbcopy
 
 # the script is now in your clipboard (assuming mac)
 # paste it and press enter!
