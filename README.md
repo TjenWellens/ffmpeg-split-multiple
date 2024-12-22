@@ -48,3 +48,17 @@ node split-music.js example/song.m4a example/song.txt | pbcopy
 # the script is now in your clipboard (assuming mac)
 # paste it and press enter!
 ```
+
+## troubleshooting
+
+### pipe into zsh skips lines?
+```shell
+node split-music.js example/song.m4a example/song.txt | zsh
+```
+#### Problem
+For some reason random lines were skipped.
+One folder had only odd track numbers, all even tracks missing.
+Another had random track numbers missing.
+#### Solution
+Fixed by copy pasting the commands (all at once worked) instead of piping into zsh.
+Still don't know why
