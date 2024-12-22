@@ -57,7 +57,9 @@ Assumes you have the song and txt next to each other, with exactly the same name
 node split-music.js "${1}m4a" "${1}txt"
 ```
 ```shell
-./shorthand.sh some/folder/nested/deeply/my-song.
+./shorthand.sh some/folder/nested/deeply/my-songs.
+./shorthand.sh some/folder/nested/deeply/some-other-songs.
+./shorthand.sh some/folder/nested/deeply/even-more-songs.
 ```
 This works nicely with autocomplete, because it stops on the `.` of the extension :-)
 
